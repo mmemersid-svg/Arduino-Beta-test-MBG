@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBG — Monitoring Bencana Gawat</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+  <link rel="stylesheet" id="page-css" href=""/>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- Brand -->
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <i class="ri-pulse-line"></i>
+      </div>
+      <div class="brand-info">
+        <div class="brand-name">MBG</div>
+        <div class="brand-sub">Monitoring Bencana Gawat</div>
+      </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="sidebar-profile">
+      <div class="profile-avatar">MBG</div>
+      <div class="profile-info">
+        <div class="profile-name">Admin</div>
+        <div class="profile-role" id="profileRole">
+          <span class="role-dot"></span> Menghubungkan
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="sidebar-menu-label">MENU</div>
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" data-target="dashboard">
+        <i class="ri-dashboard-line"></i>
+        <span>Dashboard</span>
+      </button>
+      <button class="nav-btn" data-target="gempa">
+        <i class="ri-earthquake-line"></i>
+        <span>Sensor Gempa</span>
+      </button>
+      <button class="nav-btn" data-target="ldr">
+        <i class="ri-sun-line"></i>
+        <span>Solar Tracking</span>
+      </button>
+      <button class="nav-btn" data-target="status">
+        <i class="ri-settings-3-line"></i>
+        <span>Status Sistem</span>
+      </button>
+    </nav>
+
+    <!-- Koneksi -->
+    <div class="sidebar-bottom">
+      <div class="conn-dot" id="connDot"></div>
+      <span class="conn-label" id="connLabel">Menghubungkan...</span>
+    </div>
+
+  </aside>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <button class="menu-btn" id="menuBtn">
+        <i class="ri-menu-line"></i>
+      </button>
+      <div class="breadcrumb">
+        <span class="bc-root">Dashboard</span>
+        <i class="ri-arrow-right-s-line bc-sep"></i>
+        <span class="bc-active" id="bcActive">Ringkasan</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="live-pill">
+        <span class="live-dot"></span>
+        LIVE
+      </div>
+      <div class="topbar-time" id="topbarTime">--:--:--</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div id="pageContent">
+      <!-- halaman di-inject di sini -->
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="/js/nav.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<div class="status-wrap">
+
+  <div class="page-title-row">
+    <h2>Status Sistem</h2>
+  </div>
+
+  <div class="status-grid">
+    <div class="status-card">
+      <div class="sc-icon"><i class="ri-server-line"></i></div>
+      <div class="sc-info">
+        <div class="sc-name">Server Node.js</div>
+        <div class="sc-sub">Port 3000</div>
+      </div>
+      <div class="sc-pill online">ONLINE</div>
+    </div>
+
+    <div class="status-card">
+      <div class="sc-icon"><i class="ri-wifi-line"></i></div>
+      <div class="sc-info">
+        <div class="sc-name">Socket.IO</div>
+        <div class="sc-sub" id="st-socketId">Menghubungkan...</div>
+      </div>
+      <div class="sc-pill" id="st-socketPill">...</div>
+    </div>
+
+    <div class="status-card">
+      <div class="sc-icon"><i class="ri-cpu-line"></i></div>
+      <div class="sc-info">
+        <div class="sc-name">Arduino COM3</div>
+        <div class="sc-sub">Baud Rate 9600</div>
+      </div>
+      <div class="sc-pill" id="st-arduino">...</div>
+    </div>
+
+    <div class="status-card">
+      <div class="sc-icon"><i class="ri-shake-hands-line"></i></div>
+      <div class="sc-info">
+        <div class="sc-name">Sensor SW-420</div>
+        <div class="sc-sub">Pin Digital 2 — Interrupt</div>
+      </div>
+      <div class="sc-pill" id="st-sw420">...</div>
+    </div>
+
+    <div class="status-card">
+      <div class="sc-icon"><i class="ri-sun-line"></i></div>
+      <div class="sc-info">
+        <div class="sc-name">Sensor LDR x4</div>
+        <div class="sc-sub">Pin A0, A1, A2, A3</div>
+      </div>
+      <div class="sc-pill" id="st-ldr">...</div>
+    </div>
+
+    <div class="status-card">
+      <div class="sc-icon"><i class="ri-volume-up-line"></i></div>
+      <div class="sc-info">
+        <div class="sc-name">Buzzer Passive</div>
+        <div class="sc-sub">Pin Digital 7</div>
+      </div>
+      <div class="sc-pill" id="st-buzzer">STANDBY</div>
+    </div>
+  </div>
+
+  <div class="section-label">Raw Data Terakhir</div>
+  <pre class="raw-box" id="rawBox">Menunggu data dari Arduino...</pre>
+
+</div>

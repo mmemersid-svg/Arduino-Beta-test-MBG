@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a56db;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Splash container ── */
+.splash {
+  width: 100vw;
+  height: 100vh;
+  background: #1a56db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: splashSlideUp 0.6s ease-in forwards;
+  animation-delay: 2.8s; /* tahan dulu sebelum slide up */
+}
+
+/* ── Konten tengah ── */
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  /* mulai dari bawah, naik ke posisi normal */
+  animation: contentRiseUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+/* ── MBG besar ── */
+.mbg-title {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 8px;
+  line-height: 1;
+}
+
+/* ── Subjudul ── */
+.mbg-sub {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  /* muncul sedikit lebih telat dari MBG */
+  animation: contentRiseUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.15s;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+/* ── Animasi naik masuk ── */
+@keyframes contentRiseUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Animasi seluruh splash slide up keluar ── */
+@keyframes splashSlideUp {
+  0%   { transform: translateY(0);      opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 1; }
+}
