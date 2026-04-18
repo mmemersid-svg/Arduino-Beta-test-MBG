@@ -14,10 +14,11 @@ let isLoading     = false;
 let toastTimeout  = null;
 
 const pageNames = {
-  dashboard: "Ringkasan",
-  gempa:     "Sensor Gempa",
-  ldr:       "Solar Tracking",
-  status:    "Status Sistem"
+  dashboard: "Dashboard Utama",
+  gempa: "Monitoring Gempa",
+  ldr: "Sensor Cahaya",
+  status: "Status Sistem",
+  ai: "MBG AI Assistant" // Tambahkan ini
 };
 
 // ── Socket events ──

@@ -1,3 +1,4 @@
+require('dotenv').config(); // Tambahan 1: Load .env
 const express    = require("express");
 const http       = require("http");
 const { Server } = require("socket.io");
@@ -11,6 +12,7 @@ const io     = new Server(server);
 
 // ── Static files ──
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json()); // Tambahan 2: Agar bisa baca body JSON dari frontend
 
 // ── Router ──
 app.use("/",    require("./routes/pages"));

@@ -17,12 +17,18 @@ router.get("/app", (req, res) => {
 // ── Pages (konten saja) ──
 router.get("/pages/:id", (req, res) => {
   const { id } = req.params;
-  const allowed = ["dashboard", "gempa", "ldr", "status"];
+  
+  // Daftar halaman yang diizinkan untuk di-load
+  const allowed = ["dashboard", "gempa", "ldr", "status", "ai"];
 
   if (!allowed.includes(id)) {
-    return res.status(404).json({ message: "Halaman tidak ditemukan" });
+    return res.status(404).json({ 
+      success: false, 
+      message: "Halaman tidak ditemukan" 
+    });
   }
 
+  // Kirim file html dari folder views/pages/
   res.sendFile(path.join(views, "pages", `${id}.html`));
 });
 
