@@ -1,0 +1,73 @@
+<div class="ldr-wrap">
+
+  <div class="page-title-row">
+    <h2>Solar Tracking</h2>
+    <div class="last-update">Update: <span id="ldrUpdate">Menunggu...</span></div>
+  </div>
+
+  <!-- LDR Cards -->
+  <div class="ldr-cards">
+    <div class="ldr-card">
+      <div class="ldr-icon"><i class="ri-sun-line"></i></div>
+      <div class="ldr-val" id="sl1">0</div>
+      <div class="ldr-lbl">LDR 1<br><small>Kanan Atas</small></div>
+    </div>
+    <div class="ldr-card">
+      <div class="ldr-icon"><i class="ri-sun-line"></i></div>
+      <div class="ldr-val" id="sl2">0</div>
+      <div class="ldr-lbl">LDR 2<br><small>Kiri Atas</small></div>
+    </div>
+    <div class="ldr-card">
+      <div class="ldr-icon"><i class="ri-sun-line"></i></div>
+      <div class="ldr-val" id="sl3">0</div>
+      <div class="ldr-lbl">LDR 3<br><small>Kanan Bawah</small></div>
+    </div>
+    <div class="ldr-card">
+      <div class="ldr-icon"><i class="ri-sun-line"></i></div>
+      <div class="ldr-val" id="sl4">0</div>
+      <div class="ldr-lbl">LDR 4<br><small>Kiri Bawah</small></div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="charts-row">
+    <div class="chart-card wide">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Semua LDR Realtime</div>
+          <div class="chart-sub">Intensitas cahaya per sensor</div>
+        </div>
+        <div class="chart-legend">
+          <span class="leg-dot" style="background:#6366f1"></span> L1
+          <span class="leg-dot" style="background:#f59e0b"></span> L2
+          <span class="leg-dot" style="background:#10b981"></span> L3
+          <span class="leg-dot" style="background:#ef4444"></span> L4
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chartAllLDR"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Estimasi Arah Matahari</div>
+          <div class="chart-sub">Berdasarkan LDR tertinggi</div>
+        </div>
+      </div>
+      <div class="compass-wrap">
+        <div class="compass">
+          <div class="c-cell tl"><span id="cp1">0</span><small>Kanan Atas</small></div>
+          <div class="c-void"></div>
+          <div class="c-cell tr"><span id="cp2">0</span><small>Kiri Atas</small></div>
+          <div class="c-void"></div>
+          <div class="c-center"><div class="sun-dot" id="sunDot"><i class="ri-sun-fill"></i></div></div>
+          <div class="c-void"></div>
+          <div class="c-cell bl"><span id="cp3">0</span><small>Kanan Bawah</small></div>
+          <div class="c-void"></div>
+          <div class="c-cell br"><span id="cp4">0</span><small>Kiri Bawah</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

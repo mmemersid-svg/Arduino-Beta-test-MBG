@@ -1,0 +1,81 @@
+<div class="gempa-wrap">
+
+  <div class="page-title-row">
+    <h2>Sensor Gempa SW-420</h2>
+    <div class="last-update">Update: <span id="gempaUpdate">Menunggu...</span></div>
+  </div>
+
+  <!-- Hero -->
+  <div class="gempa-layout">
+    <div class="gempa-ring-card">
+      <div class="gempa-ring" id="gempaRing">
+        <div class="ring-inner">
+          <div class="ring-val" id="g-sr">0.0</div>
+          <div class="ring-unit">SR</div>
+        </div>
+      </div>
+      <div class="ring-status" id="g-status">Tidak Terasa</div>
+      <div class="ring-desc"   id="g-desc">Tidak ada aktivitas seismik terdeteksi.</div>
+      <div class="ring-meta">
+        <div class="rm-item"><span>Sensor</span><strong>SW-420</strong></div>
+        <div class="rm-item"><span>Pin</span><strong>Digital 2</strong></div>
+        <div class="rm-item"><span>Mode</span><strong>Interrupt</strong></div>
+        <div class="rm-item"><span>Buzzer</span><strong id="g-buzzer">OFF</strong></div>
+      </div>
+    </div>
+
+    <div class="gempa-chart-card">
+      <div class="chart-header">
+        <div>
+          <div class="chart-title">Riwayat Gempa</div>
+          <div class="chart-sub">50 data terakhir</div>
+        </div>
+        <div class="chart-legend">
+          <span class="leg-dot red"></span> SR
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chartGempa2"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Skala BMKG -->
+  <div class="section-label">Skala Referensi BMKG</div>
+  <div class="scale-table">
+    <div class="scale-row" data-min="0"  data-max="2" >
+      <span class="sr-range">&lt; 2.0 SR</span>
+      <span class="sr-label">Tidak Terasa</span>
+      <div class="sr-bar safe" style="width:10%"></div>
+    </div>
+    <div class="scale-row" data-min="2"  data-max="3" >
+      <span class="sr-range">2.0 – 2.9</span>
+      <span class="sr-label">Sangat Ringan</span>
+      <div class="sr-bar safe" style="width:22%"></div>
+    </div>
+    <div class="scale-row" data-min="3"  data-max="4" >
+      <span class="sr-range">3.0 – 3.9</span>
+      <span class="sr-label">Ringan</span>
+      <div class="sr-bar warn" style="width:36%"></div>
+    </div>
+    <div class="scale-row" data-min="4"  data-max="5" >
+      <span class="sr-range">4.0 – 4.9</span>
+      <span class="sr-label">Sedang</span>
+      <div class="sr-bar warn" style="width:50%"></div>
+    </div>
+    <div class="scale-row" data-min="5"  data-max="6" >
+      <span class="sr-range">5.0 – 5.9</span>
+      <span class="sr-label">Kuat</span>
+      <div class="sr-bar danger" style="width:65%"></div>
+    </div>
+    <div class="scale-row" data-min="6"  data-max="7" >
+      <span class="sr-range">6.0 – 6.9</span>
+      <span class="sr-label">Sangat Kuat</span>
+      <div class="sr-bar danger" style="width:80%"></div>
+    </div>
+    <div class="scale-row" data-min="7"  data-max="99">
+      <span class="sr-range">≥ 7.0 SR</span>
+      <span class="sr-label">Merusak</span>
+      <div class="sr-bar critical" style="width:100%"></div>
+    </div>
+  </div>
+
+</div>
